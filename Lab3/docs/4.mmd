@@ -1,0 +1,49 @@
+
+classDiagram
+    direction LR
+    class IOrderingService {
+        <<Service>>
+        + PlaceOrder()
+    }
+    class Order {
+        <<Aggregate root>>
+        + Id
+        + OrderDate
+        +List OrderLines
+        + Location
+        + Notes
+        + Customer
+        + Status
+        + AddOrderLine()
+    }
+
+    class OrderLine{
+        + Id
+        + Item
+        + Price
+        + Count
+    }
+    class Location {
+        <<ValueObject>>
+        + Building
+        + RoomNumber
+        + Notes
+    }
+    class Customer {
+        + Id
+        + Name
+    }
+    class Status {
+        <<enum>>
+        New
+        Placed
+        Shipped
+        Delivered
+        Missing
+        Declined
+    }
+    IOrderingService --> Order
+    Order --> Location
+    Order --> OrderLine
+    Order --> Customer
+    Order --> Status

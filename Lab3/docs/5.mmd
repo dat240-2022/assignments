@@ -1,0 +1,22 @@
+
+classDiagram
+    direction LR
+    class Offer {
+        <<Aggregate root>>
+        + Id
+        + OrderId
+        + Shipper
+        + Reimbursement
+    }
+    class Shipper {
+        + Id
+        + Name
+    }
+    class Reimbursement {
+        + Id
+        + Shipper
+        + Amount
+        + InvoiceId
+    }
+    Offer --> Shipper
+    Offer --> Reimbursement

@@ -1,0 +1,11 @@
+
+flowchart TD
+    ProductContext -.FoodItemNameChanged.-> CartContext
+    ProductContext -.FoodItemPriceChanged.-> CartContext
+    CartContext --Checkout--> IOrderingService
+    subgraph OrderContext
+        IOrderingService --> Order
+    end
+    Order -.OrderPlaced.-> FulfillmentContext
+    Order -.OrderPlaced.-> InvoicingContext
+    FulfillmentContext -.OfferShipperSet.-> Order

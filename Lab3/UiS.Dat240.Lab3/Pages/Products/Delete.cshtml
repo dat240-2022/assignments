@@ -1,0 +1,18 @@
+﻿@page
+@model Lab3.Pages.Products.DeleteModel
+
+	<h2 class="display-4">Delete product</h2>
+
+@if (Model.Item is not null)
+{
+	<p>Do you want to delete the product <stong>@Model.Item.Name</stong>?</p>
+	<form method="post" class="mt-5">
+		
+			<input type="hidden" asp-for="Item!.Id" />
+	<div>
+		<button type="submit" class="btn btn-danger"><i class="bi-trash"></i> Delete</button>
+		<a class="btn btn-secondary" asp-page="Index">Cancel</a>
+	</div>
+	</form>
+	
+}

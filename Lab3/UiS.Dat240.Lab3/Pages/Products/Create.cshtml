@@ -1,0 +1,32 @@
+﻿@page
+@model Lab3.Pages.Products.CreateModel
+<h2 class="display-4">Create item</h2>
+@if (Model.Item is not null)
+{
+	<form method="post" class="mt-5">
+		<div class="mb-3">
+			Name:
+			<input asp-for="Item.Name" class="form-control" />
+		</div>
+		<div class="mb-3">
+			Description:
+			<input asp-for="Item.Description" class="form-control" />
+		</div>
+		<div class="mb-3">
+			Price:
+			<input asp-for="Item.Price" class="form-control" />
+		</div>
+		<div class="mb-3">
+			Cooktime:
+			<input asp-for="Item.CookTime" class="form-control" />
+		</div>
+
+		<button type="submit" class="btn btn-primary">Save</button>
+		@foreach (var error in Model.Errors)
+		{
+			<div class="text-danger">
+				@error
+			</div>
+		}
+	</form>
+}

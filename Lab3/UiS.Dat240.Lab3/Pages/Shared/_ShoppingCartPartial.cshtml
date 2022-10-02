@@ -1,0 +1,22 @@
+﻿@using UiS.Dat240.Lab3.Core.Domain.Cart.Pipelines
+@using UiS.Dat240.Lab3.Helpers
+@using MediatR
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor ContextAccesssor
+@inject IMediator Mediator
+@{
+	var cartId = ContextAccesssor?.HttpContext?.Session.GetGuid("CartId");
+	var itemCount = 0;
+	if (cartId is not null)
+	{
+		itemCount = await Mediator.Send(new GetItemCount.Request(cartId.Value));
+	}
+}
+<div class="my-2 my-lg-0">
+    <img src="~/img/cart.svg" height="40" width="40" alt="">
+    <a asp-page="/Cart" class="btn @(itemCount == 0 ? "disabled" : "")" style="background-color:#6F9A37; color: white;"
+        >@itemCount items in cart</a>
+</div>
+@{
+
+}

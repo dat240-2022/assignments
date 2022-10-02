@@ -1,0 +1,17 @@
+
+classDiagram
+    direction LR
+    ShoppingCart --> CartItem
+    class ShoppingCart {
+        <<Aggregate root>>
+        + Id
+        +List Items
+        + AddItem()
+    }
+    class CartItem {
+        + Id
+        + Sku
+        + Name
+        + Price
+        + Count
+    }

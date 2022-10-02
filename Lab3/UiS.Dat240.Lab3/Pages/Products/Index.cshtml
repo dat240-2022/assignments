@@ -1,0 +1,35 @@
+﻿@page
+@model Lab3.Pages.Products.IndexModel
+
+<div class="text-center">
+
+	<h1 class="display-4">Items</h1>
+	<p><a asp-page="Create"><i class="bi-plus-circle"></i> New item</a></p>
+	<div class="text-left">
+			<table class="table  table-striped table-hover">
+				<thead>
+					<tr>
+						<th scope="col">Dish</th>
+						<th scope="col">Description</th>
+						<th scope="col" class="text-right">Price</th>
+						<th scope="col" class="text-right">Cooktime</th>
+						<th scope="col"></th>
+					</tr>
+				</thead>
+				<tbody>
+
+					@foreach (var item in Model.FoodItems)
+					{
+						<tr>
+							<th scope="row">@item.Name</th>
+							<td>@item.Description</td>
+							<td class="text-right">@item.Price.ToString("c")</td>
+							<td class="text-right text-nowrap">@item.CookTime minutes</td>
+							<td><a class="btn btn-primary" asp-page="Edit" asp-route-id="@item.Id"><i class="bi-pencil"></i></a></td>
+							<td><a class="btn btn-danger" asp-page="Delete" asp-route-id="@item.Id"><i class="bi-trash"></i></a></td>
+						</tr>
+					}
+				</tbody>
+			</table>
+	</div>
+</div>

@@ -1,0 +1,38 @@
+
+classDiagram
+    direction LR
+    class Invoice {
+        <<Aggregate root>>
+        + Id
+        + Customer
+        + Address
+        + Amount
+        + OrderId
+        + Status
+    }
+    class Payment {
+        + Id
+        + Amount
+    }
+    class Customer {
+        + Id
+        + Name
+    }
+    class Status {
+        <<Enum>>
+        New
+        Paid
+        Overdue
+        Credited
+    }
+    class Address {
+        <<ValueObject>>
+        + Building
+        + RoomNumber
+        + Notes
+    }
+
+    Invoice --> Payment
+    Invoice --> Customer
+    Invoice --> Status
+    Invoice --> Address

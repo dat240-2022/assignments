@@ -1,0 +1,41 @@
+﻿@page
+@model Lab3.Pages.CartModel
+@{
+	ViewData["Title"] = "Shopping cart";
+}
+
+<div class="text-center mt-4">
+
+	<h1 class="display-4 mt-5">Your cart</h1>
+	<div class="text-left">
+		@if (Model.Cart is null)
+		{
+			<p>There is nothing in your cart</p>
+		}
+		else
+		{
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">Dish</th>
+						<th scope="col">Count</th>
+						<th scope="col">Price</th>
+						<th scope="col">Sum</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					@foreach (var item in Model.Cart.Items)
+					{
+						<tr>
+							<th scope="row">@item.Name</th>
+							<td>@item.Count</td>
+							<td>@item.Price</td>
+							<td>@item.Sum</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		}
+	</div>
+</div>

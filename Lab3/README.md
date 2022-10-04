@@ -21,7 +21,7 @@ The customer is placing an order for an item from the campus cafeteria or the ca
 Under you can find the diagram we currently have from lab two. It is very basic and does not contain a lot of information. 
 
 
-![0](./docs/0.svg)
+![0](./docs/0.png)
 
 
 ## Task
@@ -33,7 +33,7 @@ For this lab you are supposed to implement the parts of the diagram which is cur
 From the lectures the current diagram was created with some modifications:
 
 
-![1](./docs/1.svg)
+![1](./docs/1.png)
 
 
 ## Relations between the different models
@@ -41,31 +41,31 @@ From the lectures the current diagram was created with some modifications:
 ### Product Context
 
 
-![2](./docs/2.svg)
+![2](./docs/2.png)
 
 
 ### Cart Context
 
 
-![3](./docs/3.svg)
+![3](./docs/3.png)
 
 
 ### Ordering Context
 
 
-![4](./docs/4.svg)
+![4](./docs/4.png)
 
 
 ### Fulfillment Context
 
 
-![5](./docs/5.svg)
+![5](./docs/5.png)
 
 
 ### Invoicing Context
 
 
-![6](./docs/6.svg)
+![6](./docs/6.png)
 
 
 <!--![Products.svg](./docs/products.svg)-->

@@ -23,10 +23,10 @@ Under you can find the diagram we currently have from lab two. It is very basic 
 
 ![0](./docs/0.svg)
 
+
 ## Task
 
 For this lab you are supposed to implement the parts of the diagram which is currently not implemented. Continuous lines are api calls (function calls) from a pipeline to a service, where the service is in another context then the pipeline calling it. An example is that the CartContext pipeline calls the IOrderingService via the interface. Dotted lines are event based messages sent across context boundaries. The products and cart implementation are given as an inspiration for how to implement the rest.
-
 
 ### New class diagram
 
@@ -37,7 +37,6 @@ From the lectures the current diagram was created with some modifications:
 
 
 ## Relations between the different models
-
 
 ### Product Context
 
@@ -70,8 +69,6 @@ From the lectures the current diagram was created with some modifications:
 
 
 <!--![Products.svg](./docs/products.svg)-->
-
-
 
 ### Organizing the code
 
@@ -160,7 +157,7 @@ This link describes how to define an object as an value object (Owned entity) in
 
 Look at how things are implemented in Cart and Product Context. To get the extra information needed for the order, you could create a form on the checkout page, like Product have a create new food item. Use the code already there, and the code created in lab2 to get inspiration for how to do this lab.
 
-Also try and find the code for the different objects from the product and cart context shown in the diagrams. The cart and product context models have already been created, and see how the fields from the code match up with the diagram. 
+Also try and find the code for the different objects from the product and cart context shown in the diagrams. The cart and product context models have already been created, and see how the fields from the code match up with the diagram.
 
 ### OrderService.PlaceOrder
 

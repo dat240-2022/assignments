@@ -32,6 +32,10 @@ classDiagram
     }
 ```
 
+## Task
+
+For this lab you are supposed to implement the parts of the diagram which is currently not implemented. Continuous lines are api calls (function calls) from a pipeline to a service, where the service is in another context then the pipeline calling it. An example is that the CartContext pipeline calls the IOrderingService via the interface. Dotted lines are event based messages sent across context boundaries. The products and cart implementation are given as an inspiration for how to implement the rest.
+
 ### New class diagram
 
 From the lectures the current diagram was created with some modifications:
@@ -48,6 +52,8 @@ flowchart TD
     Order -.OrderPlaced.-> InvoicingContext
     FulfillmentContext -.OfferShipperSet.-> Order
 ```
+
+## Relations between the different models
 
 ### Product Context
 
@@ -109,7 +115,7 @@ classDiagram
         + Id
         + Item
         + Price
-        + Count
+        + Amount
     }
     class Location {
         <<ValueObject>>
@@ -207,15 +213,11 @@ classDiagram
 
 <!--![Products.svg](./docs/products.svg)-->
 
-## Task
-
-For this lab you are supposed to implement the parts of the diagram which is currently not implemented. Continuous lines are api class from a pipeline to a service, where the service should be in a different context from the pipeline, and dotted lines are event based messages sent across context boundaries. The products and cart implementation are given as an inspiration for how to implement the rest.
-
 ### Organizing the code
 
 You should use the same folder structure as found in `Core/Domain/Cart` and `Core/Domain/Products`. Every class, interface, record and enum should be in its own file unless it is part of another class like for instance the pipeline handlers, where the request is defined in the same file as the handler. 
 
-The code should follow the DDD principal learned in class as well as is already used in the Cart and Products folders. You should use Mediatr and the pipelines to handle context requests as shown in the Cart and Products folders. The the domain models is required to be stored in the database so they should be added to the ShopContext.
+The code should follow the DDD principal learned in the lectures as well as what is already used in the Cart and Products folders. You should use MediatR and the pipelines to handle context requests as shown in the Cart and Products folders. The the domain models is required to be stored in the database so they should be added to the ShopContext.
 
 Folder structure:
 ```

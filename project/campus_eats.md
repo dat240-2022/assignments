@@ -11,7 +11,7 @@ Campus Eats is like Foodora for the campus. Any student on the campus can regist
 The application has a few different actors with associated workflows. The lists below would be the output of some initial workshops to investigate the domain.  
 It should be further refined into various tasks and sub-tasks as part of the project.
 
-The workflows are in a prioritised order, where the top ones are more important than the bottom ones. There are intentionally more work available than the average group is expected to be able to finish, but you are expected to complete a majority of workflows for all actors.
+The workflows are in a prioritised order, where the top ones are more important than the bottom ones. There are intentionally more work available than the average group is expected to be able to finish, but you are expected to complete a majority of workflows for all actors. You should *not* attempt to finish *all* workflows for one actor before moving on to the next actor, but complete work from the different workflow in a way that makes sense, both for you and for the project. 
 
 There is also a list of technical requirements. The first half of that list must be implemented to get a passing grade.
 

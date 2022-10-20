@@ -31,9 +31,9 @@ Person that orders food. We'll need basic contact information like name, phone a
 * Log on to site.
 * Fill out their profile.
 * Browse the list of available items.
-* Put items in** a shopping cart.
+* Put items in a shopping cart.
 * Checkout the cart.
-* Pay using an external payment service. (okay to simulate this if the group is not doing the advanced requirement of external payment provider)
+* Pay using an external payment service. (start with simulating this, replace implementation if you're doing the advanced requirement of external payment provider)
 * A delivery fee is added to every order.
 * View the status of my order (submitted, being picked up, on the way for delivery, delivered, etc).
 * Cancel order (if cancelling after accepted by courier, but before pickup, delivery fee is charged, cancelling after pick up is not possible)

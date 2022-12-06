@@ -61,4 +61,4 @@ This is not a design course. You will not be penalised for having an application
 ## Oral exam
 
 * 40% of the grade is based on the oral exam and performance in the project.
-* Oral examinations is tentatively scheduled in the week 50 (December 12th to December 16th). We will send out a doodle poll once it is closer.
+* Oral examinations is tentatively scheduled 9. Dec 2022 https://docs.google.com/spreadsheets/d/1SPRg7SBPZ6vgKcXtlfgYmn79pfyYx44H2rSMrjnRg_I/edit#gid=0
